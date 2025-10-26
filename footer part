@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-ISOIS - Enno’s Incubator</title>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+
+<!-- ===== APPOINTMENTS ===== -->
+
+
+  <section id="appointments" class="appointments">
+    <h2>My Appointments</h2>
+    <form id="appointmentForm">
+      <input type="text" id="clientName" placeholder="Your Name" required />
+      <input type="date" id="date" required />
+      <input type="time" id="time" required />
+      <button type="submit">Book Appointment</button>
+    </form>
+    <ul id="appointmentList"></ul>
+  </section>
+</section>
+
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Brand Info -->
+    <div class="footer-col brand">
+  
+      <p>
+        E-ISOIS is a project of Enno’s Incubator. <br>
+        Your Gateway to Innovation, Collaboration, and Sustainable Solutions.
+      </p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#account">My Account</a></li>
+        <li><a href="#appointments">Appointments</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Our Services -->
+    <div class="footer-col">
+      <h3>Our Services</h3>
+      <ul>
+        <li><a href="#">Consultation</a></li>
+        <li><a href="#">Egg Hatching</a></li>
+        <li><a href="#">Incubator Cleaning</a></li>
+        <li><a href="#">Other Services</a></li>
+        
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-col contact">
+      <h3>Contact Us</h3>
+      <ul>
+        <li><i class="far fa-clock"></i> 9am–6pm, Monday to Friday</li>
+        <li><i class="far fa-envelope"></i> pa edit nalang briann</li>
+        <li><i class="fas fa-phone-alt"></i> ito pa hehe 
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Copyright © 2025 E-ISOIS | All Rights Reserved</p>
+  </div>
+</footer>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  scroll-behavior: smooth;
+}
+
+
+
+/* ===== SECTIONS ===== */
+section {
+  padding: 100px 10%;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1e3050;
+}
+
+/* ===== ACCOUNT + APPOINTMENTS CONTAINER ===== */
+.account-appointments-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+
+
+
+/* ===== MY APPOINTMENTS ===== */
+.appointments {
+  flex: 1;
+  min-width: 320px;
+  max-width: 550px;
+  background: #f9f9f9;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.appointments:hover {
+  transform: translateY(-3px);
+}
+
+.appointments h2 {
+  font-size: 1.6rem;
+  color: #007b9e;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#appointmentList {
+  list-style: none;
+  margin-top: 15px;
+}
+
+#appointmentList li {
+  background: #fff;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border-left: 4px solid #007b9e;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  font-size: 0.95rem;
+}
+
+/* ===== FORMS (Shared) ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input, form textarea, form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+form input:focus, form textarea:focus {
+  border-color: #007b9e;
+  outline: none;
+}
+
+form button {
+  background-color: #007b9e;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background-color: #005f78;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 900px) {
+  .account-appointments-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .account, .appointments {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+/* ===== CONTACT ===== */
+.contact textarea {
+  min-height: 120px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background-color: #005f78;
+  color: #fff;
+  padding: 60px 10% 30px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 40px;
+  align-items: start;
+}
+
+.footer-col h3 {
+  color: #ff8c42;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.footer-col ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #ff8c42;
+}
+
+/* ===== BRAND SECTION ===== */
+.footer-logo {
+  width: 150px;
+  margin-bottom: 15px;
+}
+
+.footer-col.brand p {
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.social-icons a {
+  display: inline-block;
+  color: #fff;
+  background-color: #ff8c42;
+  border-radius: 50%;
+  padding: 10px;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: #ffb36b;
+}
+
+/* ===== CONTACT SECTION ===== */
+.footer-col.contact ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+}
+
+.footer-col.contact i {
+  color: #ff8c42;
+  font-size: 1.1rem;
+}
+
+/* ===== FOOTER BOTTOM ===== */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 20px;
+  font-size: 0.9rem;
+  color: #e0e0e0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .footer {
+    padding: 50px 7% 25px;
+  }
+  .footer-col {
+    text-align: center;
+  }
+  .social-icons {
+    justify-content: center;
+  }
+}
